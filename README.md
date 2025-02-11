@@ -13,6 +13,7 @@
 * you need a "secureclient.csv" located in root containing your Citrix credentials in order to authenticate and query data
 * you can also optionally hardcode your credentials, but its not recommended
 
+<a href='https://developer-docs.citrix.com/en-us/citrix-daas-service-apis/citrix-daas-rest-apis/apis/#/About-APIs/About-GetAbout'>*link to official Citrix API documentation*</a>
 
 ## How to use this project
 
