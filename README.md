@@ -1,10 +1,10 @@
 
-<div align="center">
+<!-- <div align="center">
     <a href="ZahariG" target="_blank">
         <img src="https://i0.wp.com/www.printmag.com/wp-content/uploads/2020/09/b960fb_ed442c56da8d41d9a27a1bade24fe275mv2.jpg?fit=1568%2C882&quality=89&ssl=1" 
         alt="Logo" height="300" width="auto">
     </a>
-</div>
+</div> -->
 
 ## About
 
