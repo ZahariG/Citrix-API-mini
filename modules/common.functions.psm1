@@ -96,7 +96,7 @@ function Get-Data{
         [string]$filter
     )
 
-    $timestampFile = (Get-Date).ToString("yyyy-MM-dd_HH-mm")
+    $timestampFile = (Get-Date).ToString("HH-mm")
     $requestUri = "${apiEndpointUrl}${resource}${filter}"
     
     # Write-Host $requestUri
@@ -119,7 +119,7 @@ function Get-Data{
         $jsonFilePath = "$root/$folderName/$jsonFileName"
         $response | ConvertTo-Json -Depth 10 | Set-Content -Path $jsonFilePath
         
-        Write-Host "Success" -ForegroundColor DarkGreen
+        Write-Host "...Success!! Saved it for you to read in '${root}/${folderName}/' as '${jsonFileName}' ! " -ForegroundColor DarkGreen
         return $true
         
     } catch {
@@ -136,7 +136,7 @@ function New-Folder{
         [string]$root
     )
     # check if there is a folder with today's date, else create new folder with today's date
-    $timestampFolder = Get-Date -Format "yyyy-MM-dd_HH-mm"
+    $timestampFolder = Get-Date -Format "yyyy-MM-dd"
     $folderName = "${timestampFolder}"
     if (!(Test-Path -Path "$root/$folderName" -PathType Container)) {
         New-Item -Path "$root/$folderName/" -ItemType Directory | Out-Null

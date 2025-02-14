@@ -30,7 +30,7 @@ $folderName = New-Folder $root
 # Create Filter to get only the Fields we need #############################
 $filter = "?fields=Name,PowerState,RegistrationState,FaultState,LastErrorTime,LastErrorReason"
 
-Write-Host "###### YES MASTER, I WILL LOOK AND FIND WHAT YOU NEED ! ...  ##########"
+Write-Host "###### YES MASTER, I WILL LOOK AND FIND WHAT YOU NEED ! ...  ##########" -ForegroundColor MAGENTA
 $data = Get-Data $bearerToken $customerID $siteID $apiEndpointUrl $folderName $root 'Machines' $filter 
 
 
