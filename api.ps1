@@ -31,7 +31,7 @@ $folderName = New-Folder $root
 $filter = "?fields=Name,PowerState,RegistrationState,FaultState,LastErrorTime,LastErrorReason,MachineCatalog"
 
 Write-Host "###### Looking for data ...  ##########" -ForegroundColor Yellow
-$data = Get-Data $bearerToken $customerID $siteID $apiEndpointUrl $folderName $root 'Machines' $filter 
+Get-Data $bearerToken $customerID $siteID $apiEndpointUrl $folderName $root 'Machines' $filter 
 
 
 
