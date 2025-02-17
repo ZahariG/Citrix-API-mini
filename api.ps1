@@ -27,10 +27,14 @@ $siteID = Get-SiteID $customerID $bearerToken $siteIdUrl
 # Create New Folder for JSON to be saved to ################################
 $folderName = ""
 $folderName = New-Folder $root
-# Create Filter to get only the Fields we need #############################
-$filter = "?fields=Name,PowerState,RegistrationState,FaultState,LastErrorTime,LastErrorReason,MachineCatalog"
+
+######################################### SET FILTER AND DEFINE THE TABLE WE WANT TO GET DATA FROM ############################
+
 # Select which table we want to get the data from
 $resource = "Machines"  # This needs to be converted to an array and put into an while-loop, if we want to expand the tables
+
+# Create Filter limit the fields we need so we dont have too much useless data 
+$filter = "?fields=Name,PowerState,RegistrationState,FaultState,LastErrorTime,LastErrorReason,MachineCatalog"
 
 Write-Host "###### Looking for data ...  ##########" -ForegroundColor Yellow
 Get-Data $bearerToken $customerID $siteID $apiEndpointUrl $folderName $root $resource $filter 
