@@ -29,9 +29,11 @@ $folderName = ""
 $folderName = New-Folder $root
 # Create Filter to get only the Fields we need #############################
 $filter = "?fields=Name,PowerState,RegistrationState,FaultState,LastErrorTime,LastErrorReason,MachineCatalog"
+# Select which table we want to get the data from
+$resource = "Machines"  # This needs to be converted to an array and put into an while-loop, if we want to expand the tables
 
 Write-Host "###### Looking for data ...  ##########" -ForegroundColor Yellow
-Get-Data $bearerToken $customerID $siteID $apiEndpointUrl $folderName $root 'Machines' $filter 
+Get-Data $bearerToken $customerID $siteID $apiEndpointUrl $folderName $root $resource $filter 
 
 
 
