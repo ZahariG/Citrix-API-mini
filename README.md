@@ -17,9 +17,14 @@
 
 ## How to use this project
 
-* the usage should be selfexplanatory, else please dont use it
-* as mentioned above, you need Citrix credentials to authenticate (either in a csv or hardcoded)
-* this small script is used for testing purposes and later to expand into smthing more serious
+* As mentioned above, in order to use the script, you need to have access to the API.
+  That means you need to have valid Citrix credentials to authenticate (for your environment):
+              "Client-ID"
+              "Secret" and
+              "Customer-ID"
+     All saved in a secureclient.csv in the root folder, else you need to change the location in the script.
+* the usage should be somehow selfexplanatory, else please dont use it
+* this small script is used for testing purposes and maybe later to expand into something more serious
 
 ## Demo<!-- Required -->
 
