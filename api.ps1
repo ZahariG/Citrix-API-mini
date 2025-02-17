@@ -28,9 +28,9 @@ $siteID = Get-SiteID $customerID $bearerToken $siteIdUrl
 $folderName = ""
 $folderName = New-Folder $root
 # Create Filter to get only the Fields we need #############################
-$filter = "?fields=Name,PowerState,RegistrationState,FaultState,LastErrorTime,LastErrorReason"
+$filter = "?fields=Name,PowerState,RegistrationState,FaultState,LastErrorTime,LastErrorReason,MachineCatalog"
 
-Write-Host "###### YES MASTER, I WILL LOOK AND FIND WHAT YOU NEED ! ...  ##########" -ForegroundColor MAGENTA
+Write-Host "###### Looking for data ...  ##########" -ForegroundColor Yellow
 $data = Get-Data $bearerToken $customerID $siteID $apiEndpointUrl $folderName $root 'Machines' $filter 
 
 
