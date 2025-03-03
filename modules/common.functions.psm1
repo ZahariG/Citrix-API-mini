@@ -126,6 +126,7 @@ function Get-Data{
         Write-Host $_.Exception.Message -ForegroundColor Yellow
         Write-Host "Could not get DATA, Abort ..." -BackgroundColor Red
         return $false
+        break
     }
 }
 

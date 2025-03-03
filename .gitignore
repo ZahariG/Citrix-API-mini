@@ -2,3 +2,5 @@ secureclient.csv
 citrix.py
 logs
 common.config.psm1
+*.env
+env.ps1
