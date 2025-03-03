@@ -9,7 +9,7 @@
 ## About
 
 * this is a simple Citrix-API script in PS
-* this script querys data from the Cloud
+* this script querys data from the Cloud (CVAD, works also the same with MonitorOData but needs little changes)
 * you need a "secureclient.csv" located in root containing your Citrix credentials in order to authenticate and query data
 * you can also optionally hardcode your credentials, but its not recommended
 
